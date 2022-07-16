@@ -1,8 +1,8 @@
 import * as React from 'react';
-import reload from '../../../assets/icons/reload.png';
 import { PEOPLE_REFRESH_REQUESTED } from '../../../store/sagas/root.saga';
 import { removeOddRowsSuccess } from '../../../store/reducers/people.reducer';
 import { useDispatch } from 'react-redux';
+import { images_url } from '../../../core';
 
 export const CustomGridToolbar: React.FC = () => {
   const dispatch = useDispatch();
@@ -28,7 +28,7 @@ export const CustomGridToolbar: React.FC = () => {
         onClick={refreshGrid}
       >
         Refresh grid
-        <img src={reload} alt="reload" className="rx-icon ml-10" />
+        <img src={images_url.reload} alt="reload" className="rx-icon ml-10" />
       </div>
     </div>
   );
